@@ -1,0 +1,268 @@
+*{
+	font-family:"Roboto", sans-serif;
+}
+
+main{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.hero{
+	display: grid;
+	/*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+	grid-template-columns: repeat(2, minmax(200px, 1fr));
+	grid-template-areas: 
+	"textos imagen";
+	padding: 30px;
+	grid-auto-flow: column;
+}
+.hero-image{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	grid-area: imagen;
+}
+.info{
+	padding: 30px;
+	text-align: left;
+	grid-area: textos;
+}
+
+
+.info-title{
+	color: #333;
+	font-size: 3rem;
+	font-weight: 600;
+	margin-bottom: 24px;
+	align-self: center;
+}
+
+.info-subtitle{
+	color: #333;
+	font-size: 1.5rem;
+	margin-bottom: 24px;
+}
+
+.info-button{
+	border: none;
+	border-radius: 20px;
+	color: #333;
+	background-color: orangered;
+	font-weight: 700;
+	padding: 20px 40px;
+	font-size: 20px;
+}
+
+
+
+.containerrenglon2{
+	
+	display: grid;
+	grid-template-columns: repeat(4, minmax(100px, 1fr));
+	grid-template-areas: 
+	"titulo titulo titulo titulo"
+	"header header foto1 foto2"
+	"header header foto3 foto4";
+	grid-auto-flow: column;
+	place-content: center;
+	gap: 25px;
+	padding: 30px;
+}
+
+.title-format{
+	width: 100%;
+	height: 50%;
+	font-size: 4rem;
+	grid-area: titulo;
+	text-align: center;
+}
+
+.imgVideo{
+	width: 100%;
+	height: 100%;
+	grid-area: header;
+}
+
+.img1{
+	width: 100%;
+	height: 100%;
+	grid-area: foto1;
+}
+.img2{
+	width: 100%;
+	height: 100%;
+	grid-area: foto2;
+}
+.img3{
+	width: 100%;
+	height: 100%;
+	grid-area: foto3;
+}
+.img4{
+	width: 100%;
+	height: 100%;
+	grid-area: foto4;
+}
+
+.containerrenglon3{
+	
+	display: grid;
+	grid-template-columns: repeat(5, minmax(100px, 1fr));
+	grid-template-areas: 
+	"titulo3 titulo3 titulo3 titulo3 titulo3"
+	"foto31 foto32 foto33 foto34 foto35";
+	grid-auto-flow: column;
+	place-content: center;
+	padding: 60px 0px;
+	gap: 30px;
+}
+
+.title-format3{
+	width: 100%;
+	height: 50%;
+	font-size: 4rem;
+	/*grid-column: 1 / 4;*/
+	grid-area: titulo3;
+	text-align: center;
+}
+
+
+.img31{
+	width: 100%;
+	height: 100%;
+	grid-area: foto31;
+	background-color: antiquewhite;
+	border-top-left-radius: 40px;
+	transition: 800ms;
+}
+.img31:hover {
+	box-shadow: 5px 10px 8px 5px darksalmon;
+}
+
+.img32{
+	width: 100%;
+	height: 100%;
+	grid-area: foto32;
+	background-color: antiquewhite;
+	border-top-left-radius: 40px;
+	transition: 800ms;
+}
+.img32:hover {
+	box-shadow: 5px 10px 8px 5px darksalmon;
+}
+
+.img33{
+	width: 100%;
+	height: 100%;
+	grid-area: foto33;
+	background-color: antiquewhite;
+	border-top-left-radius: 40px;
+	transition: 800ms;
+}
+.img33:hover {
+	box-shadow: 5px 10px 8px 5px darksalmon;
+}
+
+.img34{
+	width: 100%;
+	height: 100%;
+	grid-area: foto34;
+	background-color: antiquewhite;
+	border-top-left-radius: 40px;
+	transition: 800ms;
+}
+.img34:hover {
+	box-shadow: 5px 10px 8px 5px darksalmon;
+}
+
+.img35{
+	width: 100%;
+	height: 100%;
+	grid-area: foto35;
+	background-color: antiquewhite;
+	border-top-left-radius: 40px;
+	transition: all 800ms;
+}
+
+.img35:hover {
+	box-shadow: 5px 10px 8px 5px darksalmon;
+}
+
+
+@media screen and (max-width: 810px) {
+
+	.containerrenglon2{
+
+		display: grid;
+		grid-template-columns: repeat(4, minmax(100px, 1fr));
+		grid-template-areas: 
+		"titulo titulo titulo titulo"
+		"header header header header"
+		"header header header header"
+		"foto1 foto2 foto3 foto4";
+		grid-auto-flow: column;
+		place-content: center;
+		gap: 25px;
+		padding: 30px;
+	}
+
+	.containerrenglon3{
+
+		display: grid;
+		grid-template-columns: repeat(5, minmax(100px, 1fr));
+		grid-template-areas: 
+		"titulo3 titulo3 titulo3 titulo3 titulo3"
+		"foto31 foto32 foto33 foto34 foto35";
+		grid-auto-flow: column;
+		place-content: center;
+		padding: 30px;
+		gap: 30px;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+
+	.hero{
+		display: grid;
+		/*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+		grid-template-areas: 
+		"imagen imagen imagen"
+		"textos textos textos";
+		padding: 30px;
+		grid-auto-flow: row;
+	}
+
+	.containerrenglon2{
+
+		display: grid;
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+		grid-template-areas: 
+		"titulo titulo"
+		"header header"
+		"header header"
+		"foto1 foto2" 
+		"foto3 foto4";
+		grid-auto-flow: column;
+		place-content: center;
+		gap: 25px;
+		padding: 30px;
+	}
+
+	.containerrenglon3{
+
+		display: grid;
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+		grid-template-areas: 
+		"titulo3 titulo3"
+		"foto31 foto32"
+		"foto33 foto34"
+		"foto35 foto36";
+		grid-auto-flow: column;
+		place-content: center;
+		padding: 30px;
+		gap: 30px;
+	}
+
+}
